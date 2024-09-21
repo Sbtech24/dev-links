@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <header className="bg-white p-3">
+    <div className="sm:max-w-screen-xl mx-auto mt-4 ">
+      <header className="bg-white p-3 border-none rounded-md">
         <nav className="flex justify-between items-center">
           <Image src={`/dev-link-mobile.svg`} className="sm:hidden" alt="" width={30} height={30} />
           <Image src={`/devlink-desktop.svg`} className="hidden sm:block" alt="" width={100} height={100} />
@@ -19,18 +19,21 @@ export default function Home() {
             <p className="hidden sm:block">Profile details</p>
           </div>
           </div>
-          <Link href="/preview"><Image src={`/preview.svg`} width={30} height={30} alt="preview"/></Link>
+          <div>
+          <Link href="/preview"><Image src={`/preview.svg`} className="sm:hidden" width={30} height={30} alt="preview"/></Link>
+          <Link href="/preview" className="hidden sm:block text-purple border border-purple p-2 rounded-md">Preview</Link>
+          </div>
         </nav>
       </header>
 
-      <div className="md:flex">
-        <div className="hidden md:block">
-          <div>
-            <Image src={`links-preview.svg`} width={100} height={100} alt="Links preview desktop" />
+      <div className="md:flex w-full gap-6 mt-4">
+        <div className="hidden md:block bg-white w-3/6 border-none rounded-md">
+          <div className="w-1/2 mx-auto relative">
+            <Image src={`links-preview.svg`} className="w-6/12 mx-auto absolute top-2/4 bottom-2/4 translate-x-1/2 translate-y-1/2" width={20} height={20} alt="Links preview desktop" />
           </div>
         </div>
 
-        <div className="bg-white max-w-sm mx-auto">
+        <div className="bg-white max-w-sm mx-auto sm:max-w-full w-3/6 ml-auto border-none rounded-md">
           <div className="bg-white p-3 m-2 ">
             <h1 className="font-bold ">Customize your links</h1>
             <p className="text-grey my-2">Add/edit/remove links below and then share all your profiles with the world!</p>
@@ -45,7 +48,7 @@ export default function Home() {
           </div>
           <div className="py-4">
             <div className="border border-lightGrey m-2"></div>
-            <button className="text-white bg-purple p-2 border rounded-md w-full">save</button>
+            <button className="text-white bg-purple p-2 border rounded-md w-full sm:w-1/5 block ml-auto">save</button>
           </div> 
         </div>
         
