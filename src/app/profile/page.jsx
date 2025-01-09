@@ -26,15 +26,18 @@ const page = () => {
             <p className="text-grey my-2">Add your details to create a personal touch to your profile </p>
            
 
-           <div className='bg-lightGrey py-4 pr-14 pl-6 my-2 rounded-lg '>
+           <div className='bg-lightGrey py-4 pr-14 pl-6 my-2 rounded-lg'>
                 <p className='text-lg mb-2 text-grey'>Profile picture</p>
 
                 <div className='bg-lightPurple py-16 text-center rounded-lg '>
                   <Icon icon="ph:image"style={{ color: "#633CFF",fontSize:"3em",margin:"0px auto", }}/>
                   <p className='text-purple font-bold'>+Upload Image </p>
                 </div>
+
               <p className='mt-3 mb-0'>Image must be below 1024 * 1024.Use PNG or JPG format</p>
            </div>
+
+
 
 
            <div className='bg-lightGrey py-4 pr-14 pl-6rounded-lg'>
