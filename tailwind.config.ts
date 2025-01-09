@@ -19,7 +19,7 @@ const config: Config = {
         borders: "var(--borders)",
         grey: "var(--grey)",
         red: "var(--red)",
-
+        
       },
     },
   },
