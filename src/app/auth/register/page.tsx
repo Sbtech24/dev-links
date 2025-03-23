@@ -16,14 +16,14 @@ const Register = () => {
 
         <form action="">
             <label htmlFor="" className='block text-sm text-darkGrey '>Email address
-            <input type="email" name="Email address" id="" className='block border-2 border-lightGrey text-sm p-2 rounded-md w-full' placeholder='e.g.alex@email.com'/> </label>
+            <input type="email" name="Email address" id="" className='input-style' placeholder='e.g.alex@email.com'/> </label>
 
             <label htmlFor="create-password" className='block text-sm pt-4 text-darkGrey '>Create password  
-            <input type="password" name="create-password" id="" className='block border-2 border-lightGrey text-sm p-2 mb-2 rounded-md w-full' placeholder='At Least .8 characters ' />
+            <input type="password" name="create-password" id="" className='input-style' placeholder='At Least .8 characters ' />
             </label>
 
             <label htmlFor="confirm-password" className='block text-sm pt-4 text-darkGrey '>Confirm password  
-            <input type="password" name="confirm-password" id="" className='block border-2 border-lightGrey text-sm p-2 mb-2 rounded-md w-full' placeholder='At Least .8 characters' />
+            <input type="password" name="confirm-password" id="" className='input-style' placeholder='At Least .8 characters' />
             <p>Password must contain at least 8 characters</p>
             </label>
             

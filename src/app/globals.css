@@ -35,6 +35,12 @@ body {
 p{
   color: var(--grey);
 }
+
+
+
+.input-style{
+  @apply h-10 pl-10 block border-2 border-lightGrey text-sm p-2 rounded-md w-full focus:outline-none focus:shadow-lg focus:shadow-purpleHover focus:ring-1 focus:ring-purple
+}
 /* 
 @layer utilities {
   .text-balance {

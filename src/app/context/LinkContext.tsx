@@ -56,8 +56,6 @@ export const LinkProvider = ({children}:AppProviderProps)=>{
     setLinks((prevLinks)=>[...prevLinks,newItem])
     console.log(links)
     
-
-    
    }
    const handleInput = (e:React.ChangeEvent<HTMLInputElement>)=>{
     setUrl(e.target.value)

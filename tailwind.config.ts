@@ -12,7 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         purple: "var(--purple)",
-        pupleHover: "var(--purpleHover)",
+        purpleHover: "var(--purpleHover)",
         lightPurple: "var(--light-purple)",
         white: "var(--white)",
         lightGrey: "var(--light-grey)",
