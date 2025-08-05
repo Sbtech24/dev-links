@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useContext,useState} from 'react'
-import LinkContext from '@/app/context/LinkContext'
+import LinkContext from '@/context/LinkContext'
 
 const DevLink = () => {
 

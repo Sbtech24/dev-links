@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { useState,useContext} from "react";
-import DevLink from "./components/Link/DevLink";
-import LinkContext from "./context/LinkContext";
-import Header from "./components/Header"
+import DevLink from "../components/Link/DevLink";
+import LinkContext from "../context/LinkContext";
+import Header from "../components/Header"
 export default function Home() {
 
   const {addLink} = useContext(LinkContext)
