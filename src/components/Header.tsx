@@ -11,18 +11,18 @@ const Header = () => {
          
           <div className="flex gap-2 items-center">
             <div className="flex items-center">
-            <Link href="/" className='flex items-center'><Image src={`/clip-img.svg`} width={30} height={30} alt="links"/>
+            <Link href="/" className='flex items-center'><Image src={`/clip-img.svg`} width={25} height={25} alt="links"/>
             <p className="hidden sm:block" >Links</p>
             </Link>
           </div>
           <div className="flex items-center">
-            <Link href="/profile"className='flex items-center'><Image src={`/user-circle.svg`} width={30} height={30} alt="user"/> 
+            <Link href="/profile"className='flex items-center'><Image src={`/user-circle.svg`} width={25} height={25} alt="user"/> 
             <p className="hidden sm:block">Profile details</p>
             </Link>
           </div>
           </div>
           <div>
-          <Link href="/preview"><Image src={`/preview.svg`} className="sm:hidden" width={30} height={30} alt="preview"/></Link>
+          <Link href="/preview"><Image src={`/preview.svg`} className="border p-1 border-purple rounded-md sm:hidden" width={30} height={30} alt="preview"/></Link>
           <Link href="/preview" className="hidden sm:block text-purple border border-purple p-2 rounded-md">Preview</Link>
           </div>
         </nav>
