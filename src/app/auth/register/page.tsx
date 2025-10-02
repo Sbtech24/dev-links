@@ -6,12 +6,9 @@ import {EnvelopeSimpleIcon,LockKeyIcon} from "@phosphor-icons/react";
 import { createClient } from '@/utils/superbase/client';
 import { useForm,SubmitHandler } from 'react-hook-form';
 import { useState } from 'react';
+import { FormType } from '@/types';
 
-interface FormType{
-    email:string,
-    password:string,
-    confirmPassword?:string
-}
+
 
 const superbase = createClient()
 

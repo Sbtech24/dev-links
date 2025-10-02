@@ -1,7 +1,14 @@
-import React from 'react'
-import Link from 'next/link'
 
-const page = () => {
+import Link from 'next/link'
+import { getProfile } from '@/lib/fetchProfile'
+
+
+
+const Preview = async () => {
+  const profile = await getProfile()
+  console.log(profile)
+
+
   return (
     <div className='bg-white '>
         <div className='flex justify-between mx-auto gap-2 items-center m-2 p-2'>
@@ -11,8 +18,8 @@ const page = () => {
 
         <div className='max-w-sm flex flex-col justify-center text-center py-3 mx-auto '>
             <img src="./user.svg" className='max-w-1/2 mx-auto' alt="" />
-            <h3 className='text-2xl text-gray-950 font-semibold'>Ben Wirght</h3>
-            <p className='text-sm text-grey'>ben@example.com</p>
+            <h3 className='text-2xl text-gray-950 font-semibold'>{profile.first_name}</h3>
+            <p className='text-sm text-grey'>{profile?.email}</p>
 
 
             <div className='flex flex-col py-5'>
@@ -26,4 +33,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Preview

@@ -1,9 +1,34 @@
-import React from "react";
+"use client"
 import Header from "../../components/Header";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import {useForm,SubmitHandler} from "react-hook-form"
+import { useState } from "react";
+import updateProfile from "@/lib/profile";
+
+interface ProfileType{
+  firstName:string,
+  lastName:string,
+  email:string,
+  file?:File
+}
 
 const page = () => {
+  const [file,setFile] = useState<File | null>(null)
+  const {register,handleSubmit,reset} = useForm<ProfileType>()
+
+  const onSubmit :SubmitHandler<ProfileType> = async(data:any)=>{
+   try{
+    await updateProfile(data.firstName,data.lastName,data.email,file || undefined)
+    
+    reset()
+    setFile(null)
+    alert("Profile Updated Successfully")
+   }catch(err:any){
+    console.log(err)
+    alert(err.message)
+   }
+  }
   return (
     <div className="sm:max-w-screen-xl mx-auto mt-4 ">
       <Header />
@@ -53,13 +78,14 @@ const page = () => {
               </div>
 
               <div className="bg-lightGrey p-5 rounded-lg">
-                <form action="" className="">
+                <form className="" onSubmit={handleSubmit(onSubmit)}>
                   <label htmlFor="" className="block text-gray-800 my-3">
                     First name*
                     <input
                       type="text"
-                      className="p-2 w-full rounded-md border border-borders "
+                      className="input-style"
                       placeholder="Ben"
+                      {...register("firstName",{required:true})}
                     />
                   </label>
 
@@ -67,8 +93,10 @@ const page = () => {
                     Last name*
                     <input
                       type="text"
-                      className="p-2 w-full rounded-md border border-borders "
+                      className="input-style"
                       placeholder="Wright"
+                      {...register("lastName",{required:true})}
+
                     />
                   </label>
 
@@ -77,19 +105,21 @@ const page = () => {
                     <input
                       type="email"
                       placeholder="ben@example.com"
-                      className="block p-2 w-full rounded-md border border-borders "
+                      className="input-style "
+                      {...register("email")}
                     />
                   </label>
-                </form>
-              </div>
-            </div>
-
-            <div className="py-4">
+                    <div className="py-4">
               <div className="border border-lightGrey m-2"></div>
               <button className="text-white bg-purple p-2 border rounded-md w-full sm:w-1/5 block ml-auto">
                 save
               </button>
             </div>
+                </form>
+              </div>
+            </div>
+
+          
           </div>
         </div>
       </div>
