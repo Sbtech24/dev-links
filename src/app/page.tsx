@@ -6,6 +6,7 @@ import DevLink from "../components/Link/DevLink";
 import LinkContext from "../context/LinkContext";
 import Header from "../components/Header";
 import { empty } from "@/assets";
+
 export default function Home() {
   const { addLink } = useContext(LinkContext);
   const [display, setDisplay] = useState(true);
