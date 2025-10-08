@@ -12,7 +12,7 @@
     "@phosphor-icons/react": "^2.1.7",
     "@supabase/ssr": "^0.7.0",
     "@supabase/supabase-js": "^2.58.0",
-    "next": "14.2.9",
+    "next": "^15.6.0-canary.52",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.63.0",
